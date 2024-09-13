@@ -3,12 +3,12 @@ INPUT_SCHEMA = {
         'datatype': 'STRING',
         'required': True,
         'shape': [-1],
-        'example': ["https://infer-global-models.s3.amazonaws.com/DINet/test4.mp4"]
+        'example': ["https://github.com/rbgo404/Files/raw/main/test4.mp4"]
     },
     "audio_url": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["https://infer-global-models.s3.amazonaws.com/DINet/driving_audio_1.wav"]
+        'example': ["https://github.com/rbgo404/Files/raw/main/driving_audio_1.wav"]
     }
 }
