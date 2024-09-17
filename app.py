@@ -94,9 +94,10 @@ class InferlessPythonModel:
         FILE_ID = "1CkeEn7l3PuubuJIMWNjWpIrt0HDd_AB3"
         FILE_NAME = "asserts.zip"
         self.ASSERTS_PATH = None
+        nfs_volume = os.getenv("NFS_VOLUME")
 
-        if os.path.exists("/var/nfs-mount/model_cache/Listen2"):
-            self.ASSERTS_PATH = "/var/nfs-mount/model_cache/Listen2"
+        if os.path.exists(nfs_volume):
+            self.ASSERTS_PATH = nfs_volume
         else:
             self.ASSERTS_PATH = os.getcwd()
 
