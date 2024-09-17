@@ -72,11 +72,11 @@ class DeepSpeech():
             audio = audio[:, 0]
         if audio_sample_rate != self.target_sample_rate:
             resampled_audio = resampy.resample(
-                x=audio.astype(np.float),
+                x=audio.astype(float),
                 sr_orig=audio_sample_rate,
                 sr_new=self.target_sample_rate)
         else:
-            resampled_audio = audio.astype(np.float)
+            resampled_audio = audio.astype(float)
         with tf.compat.v1.Session(graph=self.graph) as sess:
             input_vector = self.conv_audio_to_deepspeech_input_vector(
                 audio=resampled_audio.astype(np.int16),
