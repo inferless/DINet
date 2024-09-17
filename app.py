@@ -142,7 +142,7 @@ class InferlessPythonModel:
         print('loading facial landmarks from : {}'.format(opt.source_openface_landmark_path))
         if not os.path.exists(opt.source_openface_landmark_path):
             raise ('wrong facial landmark path :{}'.format(opt.source_openface_landmark_path))
-        video_landmark_data = load_landmark_openface(opt.source_openface_landmark_path).astype(np.int)
+        video_landmark_data = load_landmark_openface(opt.source_openface_landmark_path).astype(int)
         ############################################## align frame with driving audio ##############################################
         print('aligning frames with driving audio')
         video_frame_path_list = glob.glob(os.path.join(video_frame_dir, '*.jpg'))
